@@ -26,3 +26,6 @@ LIGHT_GREEN = (0,255,0)
 # Screen dimensions
 SCREEN_WIDTH  = 1024
 SCREEN_HEIGHT = 768
+
+#Tile size
+TILE_SIZE = 40
