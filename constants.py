@@ -29,3 +29,5 @@ SCREEN_HEIGHT = 768
 
 #Tile size
 TILE_SIZE = 40
+
+FPS = 60

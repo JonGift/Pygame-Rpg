@@ -16,3 +16,9 @@ class Player():
     def move(self, direction):
         if direction == "down":
             self.y_pos += constants.TILE_SIZE
+        elif direction == "up":
+            self.y_pos -= constants.TILE_SIZE
+        elif direction == "left":
+            self.x_pos -= constants.TILE_SIZE
+        elif direction == "right":
+            self.x_pos += constants.TILE_SIZE
