@@ -40,4 +40,4 @@ class Player():
 
     def draw(self):
         gameDisplay.blit(self.sprite, (self.x_pos, self.y_pos))
-
+        print("I ran")
