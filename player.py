@@ -9,6 +9,8 @@ class Player():
         self.health = 100
         self.mana = 20
 
+        self.sprite =
+
     def set_location(self, x, y):
         self.x_pos = x
         self.y_pos = y
@@ -22,3 +24,5 @@ class Player():
             self.x_pos -= constants.TILE_SIZE
         elif direction == "right":
             self.x_pos += constants.TILE_SIZE
+
+    def draw(self):
