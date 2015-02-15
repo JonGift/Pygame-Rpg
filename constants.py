@@ -31,3 +31,6 @@ SCREEN_HEIGHT = 800
 TILE_SIZE = 40
 
 FPS = 60
+
+#Lower the number the faster the player will move
+PLAYER_SPEED = 10
