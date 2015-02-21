@@ -13,11 +13,35 @@ pygame.init()
 display_surface = pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
 pygame.display.set_caption('An rpg')
 temp = dungeons.generate_dungeon(16,12)
+background = pygame.image.load('img/empty_space.png')
 
 done = False
 
+def camera(entity, map):
+    if entity.x_pos < 256:
+        entity.x_pos += 64
+        for i in range(len(map.tile_dictionary)):
+            map.tile_dictionary[i].x += 64
+
+    if entity.x_pos > 768:
+        entity.x_pos -= 64
+        for i in range(len(map.tile_dictionary)):
+            map.tile_dictionary[i].x -= 64
+
+    if entity.y_pos < 192:
+        entity.y_pos += 64
+        for i in range(len(map.tile_dictionary)):
+            map.tile_dictionary[i].y += 64
+
+    if entity.y_pos > 576:
+        entity.y_pos -= 64
+        for i in range(len(map.tile_dictionary)):
+            map.tile_dictionary[i].y -= 64
+
 player = player.Player()
 while not done:
+    display_surface.blit(background, (0,0))
+    camera(player, temp)
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
