@@ -50,4 +50,11 @@ while not done:
     clock.tick(constants.FPS)
     pygame.display.update()
 
+    if temp.tile_dictionary_xy['15,11'].new_type != 'grass':
+        temp.tile_dictionary_xy['15,11'].new_type = 'grass'
+        temp.update_tile_xy('15,11')
+    else:
+        temp.tile_dictionary_xy['15,11'].new_type = 'blank_tile'
+        temp.update_tile_xy('15,11')
+
 pygame.quit()
