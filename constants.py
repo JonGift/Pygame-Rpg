@@ -28,6 +28,9 @@ SCREEN_WIDTH  = 1024
 SCREEN_HEIGHT = 768
 
 #Tile size
-TILE_SIZE = 40
+TILE_SIZE = 64
 
 FPS = 60
+
+#The lower the number the faster the player will move
+PLAYER_SPEED = 10
