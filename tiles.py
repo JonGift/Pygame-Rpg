@@ -10,10 +10,14 @@ class tile:
         self.x = 0
         self.y = 0
         self.reference_name = 0
+        self.solid = False
         if self.type == 0:
             self.type = 'blank_tile'
         if self.type == 1:
             self.type = 'grass'
+        if self.type == 2:
+            self.type = 'wall_stone'
+            self.solid = True
 
 def create_tile(pos_x, pos_y, type, reference_number, tile_size = constants.TILE_SIZE):
     #Create a tile with all of the needed params. Used best with class map.

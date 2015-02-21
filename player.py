@@ -10,8 +10,9 @@ class Player():
         self.x_vel = 0
         self.y_vel = 0
         self.wait = 0
-        self.move_delay = 0 #When this is 1 the player is moving
+        self.move_delay = 0 # When this is 1 the player is moving
         self.finish_move = 0
+        self.move_queue = ""
 
         self.health = 100
         self.mana = 20
@@ -21,7 +22,7 @@ class Player():
 
         self.rect = self.sprite.get_rect()
 
-        #Lists which way the player is facing: N=0, W=1, S=2, E=3
+        # Lists which way the player is facing: N=0, W=1, S=2, E=3
         self.dir_facing = 0
 
     def set_location(self, x, y):
@@ -30,6 +31,7 @@ class Player():
 
     def move(self, direction):
         if self.x_vel == 0 and self.y_vel == 0:
+            print("ran")
             if direction == "down":
                 self.y_vel = -1
                 self.x_vel = 0
@@ -49,6 +51,20 @@ class Player():
                 self.x_vel = 1
                 self.y_vel = 0
                 self.move_delay = 1
+
+        # This will queue up a move command for when the previous key is released.
+        elif self.move_queue == "":
+            if direction == "down":
+                self.move_queue = "down"
+
+            elif direction == "up":
+                self.move_queue = "up"
+
+            elif direction == "left":
+                self.move_queue = "left"
+
+            elif direction == "right":
+                self.move_queue = "right"
                 
     def stop(self):
             self.finish_move = 1
@@ -90,6 +106,11 @@ class Player():
                 self.x_vel = 0
                 self.y_vel = 0
                 self.wait = 0
+
+                # print(self.x_vel, self.y_vel)
+                # if self.move_queue != "":
+                #     self.move(self.move_queue)
+                # print(self.x_vel, self.y_vel)
 
 
         self.draw()

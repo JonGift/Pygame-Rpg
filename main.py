@@ -6,13 +6,13 @@ import constants
 import tiles
 import player
 import menus
+import dungeons
 
 clock = pygame.time.Clock()
 pygame.init()
 display_surface = pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
 pygame.display.set_caption('An rpg')
-temp = pygame.image.load('img/blank_tile.png')
-temp = tiles.map(16,12,'temp')
+temp = dungeons.generate_dungeon(16,12)
 
 done = False
 
@@ -50,11 +50,11 @@ while not done:
     clock.tick(constants.FPS)
     pygame.display.update()
 
-    if temp.tile_dictionary_xy['15,11'].new_type != 'grass':
-        temp.tile_dictionary_xy['15,11'].new_type = 'grass'
-        temp.update_tile_xy('15,11')
-    else:
-        temp.tile_dictionary_xy['15,11'].new_type = 'blank_tile'
-        temp.update_tile_xy('15,11')
+    #if temp.tile_dictionary_xy['0,11'].new_type != 'grass':
+    #    temp.tile_dictionary_xy['0,11'].new_type = 'grass'
+    #    temp.update_tile_xy('0,11')
+    #else:
+    #    temp.tile_dictionary_xy['15,11'].new_type = 'blank_tile'
+    #    temp.update_tile_xy('15,11')
 
 pygame.quit()
