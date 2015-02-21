@@ -5,6 +5,7 @@ import sys
 import constants
 import tiles
 import player
+import menus
 
 clock = pygame.time.Clock()
 pygame.init()
