@@ -33,4 +33,4 @@ TILE_SIZE = 64
 FPS = 60
 
 #The lower the number the faster the player will move
-PLAYER_SPEED = 10
+PLAYER_SPEED = 8
