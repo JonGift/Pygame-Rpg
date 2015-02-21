@@ -11,7 +11,7 @@ pygame.init()
 display_surface = pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
 pygame.display.set_caption('An rpg')
 temp = pygame.image.load('img/blank_tile.png')
-temp = tiles.map(25,20,'temp')
+temp = tiles.map(16,12,'temp')
 
 done = False
 

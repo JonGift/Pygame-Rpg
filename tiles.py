@@ -14,8 +14,8 @@ class tile:
 def create_tile(pos_x, pos_y, type, reference_number, tile_size = constants.TILE_SIZE):
     new_tile = tile(type, tile_size)
     new_tile.type = pygame.image.load('img/' + new_tile.type + '.png')
-    new_tile.x = pos_x * 40
-    new_tile.y = pos_y * 40
+    new_tile.x = pos_x * 64
+    new_tile.y = pos_y * 64
     new_tile.reference_name = reference_number
 
     return new_tile
