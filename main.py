@@ -23,17 +23,16 @@ while not done:
             done = True
 
         if event.type == pygame.KEYDOWN:
-            if player.wait == 0:
-                if event.key == pygame.K_LEFT:
-                    player.move("left")
-                elif event.key == pygame.K_RIGHT:
-                    player.move("right")
-                elif event.key == pygame.K_UP:
-                    player.move("up")
-                elif event.key == pygame.K_DOWN:
-                    player.move("down")
-                elif event.key == pygame.K_w:
-                    done = True
+            if event.key == pygame.K_LEFT:
+                player.move("left")
+            elif event.key == pygame.K_RIGHT:
+                player.move("right")
+            elif event.key == pygame.K_UP:
+                player.move("up")
+            elif event.key == pygame.K_DOWN:
+                player.move("down")
+            elif event.key == pygame.K_w:
+                done = True
 
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT:
