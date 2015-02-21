@@ -60,13 +60,13 @@ while not done:
 
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_LEFT:
-                player.stop()
+                player.stop("left")
             elif event.key == pygame.K_RIGHT:
-                player.stop()
+                player.stop("right")
             elif event.key == pygame.K_UP:
-                player.stop()
+                player.stop("up")
             elif event.key == pygame.K_DOWN:
-                player.stop()
+                player.stop("down")
 
     temp.update(display_surface)
     player.update()
