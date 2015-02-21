@@ -1,6 +1,7 @@
 __pycache__/
 
 # Created by https://www.gitignore.io
+*.pyc
 
 ### PyCharm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
