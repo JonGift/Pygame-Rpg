@@ -31,7 +31,6 @@ class Player():
 
     def move(self, direction):
         if self.x_vel == 0 and self.y_vel == 0:
-            print("ran")
             if direction == "down":
                 self.y_vel = -1
                 self.x_vel = 0
@@ -107,10 +106,9 @@ class Player():
                 self.y_vel = 0
                 self.wait = 0
 
-                # print(self.x_vel, self.y_vel)
-                # if self.move_queue != "":
-                #     self.move(self.move_queue)
-                # print(self.x_vel, self.y_vel)
+                if self.move_queue != "":
+                    self.move(self.move_queue)
+                    self.move_queue = ""
 
 
         self.draw()
