@@ -107,10 +107,10 @@ class Player():
                 self.y_vel = 0
                 self.wait = 0
 
-                print(self.x_vel, self.y_vel)
-                if self.move_queue != "":
-                    self.move(self.move_queue)
-                print(self.x_vel, self.y_vel)
+                # print(self.x_vel, self.y_vel)
+                # if self.move_queue != "":
+                #     self.move(self.move_queue)
+                # print(self.x_vel, self.y_vel)
 
 
         self.draw()
