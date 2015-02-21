@@ -31,7 +31,6 @@ class Player():
 
     def move(self, direction):
         if self.x_vel == 0 and self.y_vel == 0:
-            print("ran")
             if direction == "down":
                 self.y_vel = -1
                 self.x_vel = 0
