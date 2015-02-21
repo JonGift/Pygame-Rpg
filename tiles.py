@@ -11,6 +11,8 @@ class tile:
         self.y = 0
         self.reference_name = 0
         self.solid = False
+        if self.type == -1:
+            self.type = 'empty_space'
         if self.type == 0:
             self.type = 'blank_tile'
         if self.type == 1:
