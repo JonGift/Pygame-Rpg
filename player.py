@@ -3,6 +3,7 @@ import pygame
 
 display_surface = pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
 
+#Appears the move function is still getting stuck if you quickly double tap or triple tap the key.
 class Player():
     def __init__(self):
         self.x_pos = 0
@@ -65,9 +66,31 @@ class Player():
             elif direction == "right":
                 self.move_queue = "right"
                 
-    def stop(self):
-            self.finish_move = 1
-            self.move_delay = 0
+    def stop(self, direction):
+        if direction == "left":
+            if self.x_vel == -1:
+                self.finish_move = 1
+                self.move_delay = 0
+            elif self.move_queue == "left":
+                self.move_queue = ""
+        if direction == "right":
+            if self.x_vel == 1:
+                self.finish_move = 1
+                self.move_delay = 0
+            elif self.move_queue == "right":
+                self.move_queue = ""
+        if direction == "up":
+            if self.y_vel == 1:
+                self.finish_move = 1
+                self.move_delay = 0
+            elif self.move_queue == "up":
+                self.move_queue = ""
+        if direction == "down":
+            if self.y_vel == -1:
+                self.finish_move = 1
+                self.move_delay = 0
+            elif self.move_queue == "down":
+                self.move_queue = ""
 
 
 
