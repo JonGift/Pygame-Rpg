@@ -22,6 +22,10 @@ while not done:
 
         camera.camera_movement(camera.camera(player, temp), player, temp)
 
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                done = True
+
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_LEFT:
                     player.move("left")
@@ -44,15 +48,11 @@ while not done:
                 elif event.key == pygame.K_DOWN:
                     player.stop("down")
 
-        player.update()
         temp.update(constants.display_surface)
         player.update()
+
     if state == 1:
         pass
-    
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            done = True
 
     constants.clock.tick(constants.FPS)
     pygame.display.update()
