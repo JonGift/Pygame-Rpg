@@ -2,6 +2,7 @@
 Global constants
 """
 import pygame
+pygame.init()
 
 # Sets clock function
 clock = pygame.time.Clock()
