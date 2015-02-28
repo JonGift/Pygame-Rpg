@@ -46,5 +46,15 @@ def text_to_screen(text, x="center", y="center", color=constants.BLACK, size="sm
         text_surface = constants.large_font.render(text, True, color)
 
     text_rect = text_surface.get_rect()
-    text_rect.center = (constants.SCREEN_WIDTH/2), (constants.SCREEN_HEIGHT/2)
+
+    if x == "center" and y == "center":
+        text_rect.center = (constants.SCREEN_WIDTH/2), (constants.SCREEN_HEIGHT/2)
+    elif x == "center":
+        text_rect.center = (constants.SCREEN_WIDTH/2), y
+    elif y == "center":
+        text_rect.center = x, (constants.SCREEN_HEIGHT/2)
+    else:
+        text_rect.center = x, y
+
+
     constants.display_surface.blit(text_surface, text_rect)
