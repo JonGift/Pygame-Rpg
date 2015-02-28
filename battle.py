@@ -1,7 +1,10 @@
 import player
+import menus
+import constants
 
 def battle_gui(entity):
-
+    bottom = menus.Button(0, 668, 1024, 100, constants.LIGHT_RED)
+    bottom.update(constants.display_surface)
 
 def battle(ally, enemy):
     #do the cool intro here

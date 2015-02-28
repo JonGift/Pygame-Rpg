@@ -6,20 +6,22 @@ import player
 import menus
 import dungeons
 import camera
+import battle
 
 pygame.init()
 pygame.display.set_caption('An rpg')
 temp = dungeons.generate_dungeon(16,12)
 background = pygame.image.load('img/empty_space.png')
 state = 0
+#testing = menus.Button(0, 0, 600, 100, constants.LIGHT_RED)
 
 done = False
 
 player = player.Player()
 while not done:
+    constants.display_surface.blit(background, (0,0))
     if state == 0:
-        constants.display_surface.blit(background, (0,0))
-
+        battle.battle_gui('dingo')
         camera.camera_movement(camera.camera(player, temp), player, temp)
 
         for event in pygame.event.get():
