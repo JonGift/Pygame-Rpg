@@ -19,7 +19,6 @@ def pause():
 
     while paused:
         print("Paused")
-        text_to_screen("Paused")
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -34,7 +33,9 @@ def pause():
                     quit()
 
         constants.display_surface.fill(constants.WHITE)
+        text_to_screen("Paused")
         constants.clock.tick(5)
+        pygame.display.update()
 
 def text_to_screen(text, x="center", y="center", color=constants.BLACK, size="small"):
     if size == "small":

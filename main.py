@@ -37,6 +37,8 @@ while not done:
                     player.move("up")
                 elif event.key == pygame.K_DOWN:
                     player.move("down")
+                elif event.key == pygame.K_p:
+                    menus.pause()
                 elif event.key == pygame.K_w:
                     done = True
 

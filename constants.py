@@ -41,6 +41,6 @@ FPS = 60
 PLAYER_SPEED = 8
 
 #Different text sizes for in menus
-small_font = pygame.font.SysFont('comicsansms', 25)
-medium_font = pygame.font.SysFont("comicsansms", 50)
-large_font = pygame.font.SysFont("comicsansms", 80)
+small_font = pygame.font.SysFont("arial", 25)
+medium_font = pygame.font.SysFont("arial", 50)
+large_font = pygame.font.SysFont("arial", 80)
