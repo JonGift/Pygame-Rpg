@@ -1,6 +1,10 @@
 """
 Global constants
 """
+import pygame
+
+# Sets clock function
+clock = pygame.time.Clock()
 
 # Colors
 BLACK    = (   0,   0,   0) 
@@ -26,6 +30,8 @@ LIGHT_GREEN = (0,255,0)
 # Screen dimensions
 SCREEN_WIDTH  = 1024
 SCREEN_HEIGHT = 768
+
+display_surface = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 #Tile size
 TILE_SIZE = 64

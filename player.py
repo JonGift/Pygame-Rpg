@@ -1,7 +1,6 @@
 import constants
 import pygame
 
-display_surface = pygame.display.set_mode((constants.SCREEN_WIDTH, constants.SCREEN_HEIGHT))
 
 #Appears the move function is still getting stuck if you quickly double tap or triple tap the key.
 class Player():
@@ -96,7 +95,7 @@ class Player():
 
 
     def draw(self):
-        display_surface.blit(self.sprite, (self.x_pos, self.y_pos))
+        constants.display_surface.blit(self.sprite, (self.x_pos, self.y_pos))
 
     def update(self):
         if self.move_delay == 1 or self.finish_move == 1:
